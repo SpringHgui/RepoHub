@@ -17,9 +17,11 @@ namespace RepoHub.Controllers
         {
             var body = await Request.Body.ReadToEndAsync();
 
-            logger.LogInformation($"[Url]: {Request.GetDisplayUrl()}");
-            logger.LogInformation($"[Body]: {body}");
+            logger.LogInformation($"===== [Url]: {Request.Method} {Request.GetDisplayUrl()}");
+            logger.LogInformation($"===== [Body]: {body}");
             return Content("_NotImplemented", "text/html", Encoding.UTF8);
         }
+
+       
     }
 }
